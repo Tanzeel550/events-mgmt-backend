@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome Back to Zeelus!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #2563eb;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            padding: 24px;
+            color: #1e293b;
+        }
+        h2 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+        .login-details {
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            padding: 16px;
+            font-size: 13px;
+            color: #94a3b8;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>👋 Welcome Back!</h1>
+    </div>
+    <div class="content">
+        <p>Hi <strong>{{name}}</strong>,</p>
+        <p>We noticed you recently logged into your Zeelus account. Welcome back!</p>
+
+        <div class="login-details">
+            <h2>Login Details</h2>
+            <p><strong>Login Time:</strong> {{loginTime}}</p>
+            <p><strong>Email:</strong> {{email}}</p>
+        </div>
+
+        <p>If this was you, you can safely ignore this email. If you don't recognize this activity, please contact our support team immediately.</p>
+
+        <p>— ZEELUS</p>
+    </div>
+    <div class="footer">
+        &copy; {{year}} Zeelus. All rights reserved.
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Event Created Successfully</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #2563eb;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            padding: 24px;
+            color: #1e293b;
+        }
+        h2 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+        .event-details {
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            padding: 16px;
+            font-size: 13px;
+            color: #94a3b8;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🎉 Thanks for Creating an Event!</h1>
+    </div>
+    <div class="content">
+        <p>Hi <strong>{{creatorName}}</strong>,</p>
+        <p>We’re excited to confirm that your event has been successfully created.</p>
+
+        <div class="event-details">
+            <h2>{{title}}</h2>
+            <p><strong>Description:</strong> {{description}}</p>
+            <p><strong>Date:</strong> {{date}}</p>
+            <p><strong>Start Time:</strong> {{startTime}}</p>
+            <p><strong>End Time:</strong> {{endTime}}</p>
+        </div>
+
+        <p>We’ll make sure everything runs smoothly for your upcoming event.
+            You can edit or manage it anytime in your dashboard.</p>
+
+        <p>— ZEELUS</p>
+    </div>
+    <div class="footer">
+        &copy; {{year}} Evently. All rights reserved.
+    </div>
+</div>
+</body>
+</html>

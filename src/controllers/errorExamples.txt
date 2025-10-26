@@ -1,0 +1,119 @@
+	"err": {
+        "errorResponse": {
+            "index": 0,
+            "code": 11000,
+            "errmsg": "E11000 duplicate key error collection: test.tours index: name_1 dup key: { name: \"Admin Only Tour\" }",
+            "keyPattern": {
+                "name": 1
+            },
+            "keyValue": {
+                "name": "Admin Only Tour"
+            }
+        },
+        "index": 0,
+        "code": 11000,
+        "keyPattern": {
+            "name": 1
+        },
+        "keyValue": {
+            "name": "Admin Only Tour"
+        }
+    }
+    
+    
+    "err": {
+        "errors": {
+            "name": {
+                "name": "ValidatorError",
+                "message": "Admin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only Tour exceeds the max limit of 30",
+                "properties": {
+                    "message": "Admin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only Tour exceeds the max limit of 30",
+                    "type": "maxlength",
+                    "maxlength": 30,
+                    "path": "name",
+                    "value": "Admin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only Tour"
+                },
+                "kind": "maxlength",
+                "path": "name",
+                "value": "Admin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only Tour"
+            }
+        },
+        "_message": "tour validation failed",
+        "name": "ValidationError",
+        "message": "tour validation failed: name: Admin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only TourAdmin Only Tour exceeds the max limit of 30"
+    }
+    
+    "err": {
+        "errors": {
+            "name": {
+                "name": "ValidatorError",
+                "message": "a fall below the min limit of 5",
+                "properties": {
+                    "message": "a fall below the min limit of 5",
+                    "type": "minlength",
+                    "minlength": 5,
+                    "path": "name",
+                    "value": "a"
+                },
+                "kind": "minlength",
+                "path": "name",
+                "value": "a"
+            }
+        },
+        "_message": "tour validation failed",
+        "name": "ValidationError",
+        "message": "tour validation failed: name: a fall below the min limit of 5"
+    }
+
+
+    "err": {
+        "errors": {
+            "difficulty": {
+                "name": "ValidatorError",
+                "message": "easyyyyyyyyyy doesn't match \"easy, medium, difficult\"",
+                "properties": {
+                    "message": "easyyyyyyyyyy doesn't match \"easy, medium, difficult\"",
+                    "type": "enum",
+                    "enumValues": [
+                        "easy",
+                        "medium",
+                        "difficult"
+                    ],
+                    "path": "difficulty",
+                    "value": "easyyyyyyyyyy"
+                },
+                "kind": "enum",
+                "path": "difficulty",
+                "value": "easyyyyyyyyyy"
+            }
+        },
+        "_message": "tour validation failed",
+        "name": "ValidationError",
+        "message": "tour validation failed: difficulty: easyyyyyyyyyy doesn't match \"easy, medium, difficult\""
+    }
+    
+    "err": {
+        "errors": {
+            "price": {
+                "stringValue": "\"laskdjf;alksdjf\"",
+                "valueType": "string",
+                "kind": "Number",
+                "value": "laskdjf;alksdjf",
+                "path": "price",
+                "reason": {
+                    "generatedMessage": true,
+                    "code": "ERR_ASSERTION",
+                    "actual": false,
+                    "expected": true,
+                    "operator": "=="
+                },
+                "name": "CastError",
+                "message": "Cast to Number failed for value \"laskdjf;alksdjf\" (type string) at path \"price\""
+            }
+        },
+        "_message": "tour validation failed",
+        "name": "ValidationError",
+        "message": "tour validation failed: price: Cast to Number failed for value \"laskdjf;alksdjf\" (type string) at path \"price\""
+    }
+    
+	// CastError also works for startDates
