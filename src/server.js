@@ -13,8 +13,24 @@ const bookingRouter = require("./routes/bookingRouter");
 
 const app = express();
 
-// Middlewares
-app.use(cors());
+const allowedOrigins = [
+	"https://events-mgmt.vercel.app", // your deployed frontend
+	"http://localhost:3000" // for local development
+];
+
+app.use(cors({
+	origin: function (origin, callback) {
+		// allow requests with no origin (like mobile apps, curl)
+		if (!origin) return callback(null, true);
+		if (allowedOrigins.includes(origin)) {
+			return callback(null, true);
+		} else {
+			return callback(new Error("Not allowed by CORS"));
+		}
+	},
+	credentials: true, // <-- THIS IS ESSENTIAL
+}));
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
